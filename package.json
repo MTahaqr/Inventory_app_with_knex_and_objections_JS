@@ -1,0 +1,43 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "DEBUG=inventory-app nodemon src/index.js",
+    "migrate": "DEBUG=inventory-app knex migrate:latest",
+    "rollback": "DEBUG=inventory-app knex migrate:rollback",
+    "seed": "DEBUG=inventory-app knex seed:run",
+    "test": "DEBUG=inventory-app jest",
+    "lint": "eslint db src"
+  },
+  "keywords": [],
+  "author": "CJ R. <cj@null.computer> (https://w3cj.now.sh)",
+  "license": "MIT",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "compression": "^1.7.4",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "helmet": "^5.1.1",
+    "jsonwebtoken": "^8.5.1",
+    "knex": "^2.2.0",
+    "morgan": "^1.10.0",
+    "objection": "^3.0.1",
+    "papaparse": "^5.3.2",
+    "pg": "^8.7.3",
+    "yup": "^0.32.11"
+  },
+  "devDependencies": {
+    "eslint": "^8.21.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "jest": "^28.1.3",
+    "nodemon": "^2.0.19",
+    "prettier": "^2.7.1",
+    "supertest": "^6.2.4"
+  }
+}
